@@ -15,7 +15,9 @@ ngOnInit() {
         new Wydatek('Myjnia', 75, '', new Date(2018, 4, 2)),
         new Wydatek('Serwis', 1250, 'Klocki, rozrząd i parę drobiazgów', new Date(2018, 3, 16)),
         new Wydatek('Inne', 315.50, 'Różowe futerko na kierownicę', new Date(2018, 3, 16)),
-        new Wydatek('Tankowanie', 325.20, 'Do pełna po urlopie', new Date(2017, 7, 12),)
+        new Wydatek('Tankowanie', 325.20, 'Do pełna po urlopie', new Date(2017, 7, 12), 10, 100),
+        new Wydatek('Tankowanie', 325.20, 'Do pełna po urlopie', new Date(2017, 5, 12), 15, null),
+        new Wydatek('Tankowanie', 325.20, 'Do pełna po urlopie', new Date(2017, 7, 11),null, 20)
     ];
 }
 

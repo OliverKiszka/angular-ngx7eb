@@ -5,8 +5,8 @@ export class Wydatek {
         public kwota: number,
         public opis: string,
         public data: Date,
-        public ileKm: string ,
-        public ileLitrow: string) {
+        public ileKm?: number ,
+        public ileLitrow?: number) {
     }
 }
 export const KATEGORIE = [ 'Tankowanie', 'Myjnia', 'Serwis', 'Inne', 'Wydatki' ];
