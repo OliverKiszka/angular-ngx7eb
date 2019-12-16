@@ -5,21 +5,26 @@
         <th>Kwota</th>
         <th>Opis</th>
         <th>Litry/KM</th>
-        <th></th>
+        <th>Usun</th>
     </tr>
     <tr *ngFor="let wydatek of wydatki">
       <td>{{wydatek.kategoria}}</td>
       <td>{{wydatek.data | date:'dd.MM.yyyy'}}</td>
       <td class="text-sm-right">{{wydatek.kwota | number:'1.2-2'}} zł</td>
       <td>{{wydatek.opis}}</td>
-      <div *ngIf="wydatek.kategoria=='Tankowanie'">
+      <!-- <div *ngIf="wydatek.kategoria=='Tankowanie'">
         <td *ngIf="wydatek.ileKm && wydatek.ileLitrow">{{wydatek.ileLitrow}}l / {{wydatek.ileKm}}km</td> 
         <td *ngIf="!wydatek.ileKm && wydatek.ileLitrow">{{wydatek.ileLitrow}}l</td> 
         <td *ngIf="wydatek.ileKm && !wydatek.ileLitrow">{{wydatek.ileKm}}km</td> 
-        <td>
+      </div> -->
+      <td *ngIf="wydatek.ileKm && wydatek.ileLitrow && wydatek.kategoria=='Tankowanie'">{{wydatek.ileLitrow}}l / {{wydatek.ileKm}}km</td> 
+      <td *ngIf="!wydatek.ileKm && wydatek.ileLitrow && wydatek.kategoria=='Tankowanie'">{{wydatek.ileLitrow}}l</td> 
+      <td *ngIf="wydatek.ileKm && !wydatek.ileLitrow && wydatek.kategoria=='Tankowanie'">{{wydatek.ileKm}}km</td> 
+      <td *ngIf="(!wydatek.ileKm && !wydatek.ileLitrow ) || (wydatek.kategoria!='Tankowanie')">
+      </td>
+       <td>
           <button class="btn btn-danger" (click)="usunWydatek(wydatek.id)">Usuń</button>
-        </td>
-      </div>
+      </td>
 </tr>
 
 </table>
