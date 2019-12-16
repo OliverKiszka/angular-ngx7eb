@@ -15,5 +15,8 @@ export class ListaWydatkowComponent implements OnInit {
   ngOnInit() {
     this.wydatki = this.wydatkiService.getWydatki();
   }
+  usunWydatek(id: number) {
+    this.wydatkiService.usunWydatek(id);
+  }
 
 }

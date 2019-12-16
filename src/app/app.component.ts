@@ -20,8 +20,5 @@ ngOnInit() {
 //         new Wydatek('Tankowanie', 276.34, 'Tylko litry, "null" kilometrów', new Date(2017, 8, 30),null, 30)
 //     ];
 // }
-
 }
-
-
 }
