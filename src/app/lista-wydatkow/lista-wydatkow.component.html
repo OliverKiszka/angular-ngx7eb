@@ -20,8 +20,7 @@
       <td *ngIf="wydatek.ileKm && wydatek.ileLitrow && wydatek.kategoria=='Tankowanie'">{{wydatek.ileLitrow}}l / {{wydatek.ileKm}}km</td> 
       <td *ngIf="!wydatek.ileKm && wydatek.ileLitrow && wydatek.kategoria=='Tankowanie'">{{wydatek.ileLitrow}}l</td> 
       <td *ngIf="wydatek.ileKm && !wydatek.ileLitrow && wydatek.kategoria=='Tankowanie'">{{wydatek.ileKm}}km</td> 
-      <td *ngIf="(!wydatek.ileKm && !wydatek.ileLitrow ) || (wydatek.kategoria!='Tankowanie')">
-      </td>
+      <td *ngIf="(!wydatek.ileKm && !wydatek.ileLitrow ) || (wydatek.kategoria!='Tankowanie')"></td>
        <td>
           <button class="btn btn-danger" (click)="usunWydatek(wydatek.id)">Usuń</button>
       </td>
